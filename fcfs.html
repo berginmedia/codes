@@ -1,20 +1,27 @@
-#include <stdio.h>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<pre>#include &lt;stdio.h&gt;
 
 int main() {
     int n;
     printf("Enter number of processes: ");
-    scanf("%d", &n);
+    scanf("%d", &amp;n);
 
     int at[20], bt[20], ct[20], tat[20], wt[20];
 
-    for(int i=0;i<n;i++){
+    for(int i=0;i&lt;n;i++){
         printf("AT BT for P%d: ", i+1);
-        scanf("%d %d", &at[i], &bt[i]);
+        scanf("%d %d", &amp;at[i], &amp;bt[i]);
     }
 
     int time = 0;
-    for(int i=0;i<n;i++){
-        if(time < at[i]) time = at[i];
+    for(int i=0;i&lt;n;i++){
+        if(time &lt; at[i]) time = at[i];
         time += bt[i];
         ct[i] = time;
         tat[i] = ct[i] - at[i];
@@ -22,9 +29,11 @@ int main() {
     }
 
     printf("P\tAT\tBT\tCT\tTAT\tWT\n");
-    for(int i=0;i<n;i++)
+    for(int i=0;i&lt;n;i++)
         printf("%d\t%d\t%d\t%d\t%d\t%d\n",
                i+1, at[i], bt[i], ct[i], tat[i], wt[i]);
 
     return 0;
-}
+}</pre>
+</body>
+</html>
